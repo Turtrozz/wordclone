@@ -20,9 +20,41 @@ from tkinter import *
 
 class Main:
 
+
+	
+	
+
+
+
+
 	@staticmethod
 
 	def main():
+
+		
+
+
+		def menuTAB(m_options):
+
+			m_tab = Menu(m_options[0],tearoff = 0)
+
+			if(len(m_options) > 2):
+
+				m_tab_options = m_options[2:]
+				
+				for m_tab_option in range(0,len(m_tab_options)):
+
+					m_tab.add_command(label=m_tab_options[m_tab_option])
+
+
+			m_options[0].add_cascade(label=m_options[1],menu = m_tab)
+
+
+
+
+
+
+		
 
 		mainAppWindow = Tk()
 
@@ -35,18 +67,22 @@ class Main:
 
 		menuBar = Menu(mainAppWindow)
 
-		m_bookmarkTab = Menu(menuBar,tearoff = 0)
 
-		m_bookmarkTab.add_command(label="Surprise")
-		m_bookmarkTab.add_command(label="Shadrack")
-		m_bookmarkTab.add_command(label="Happy")
-		m_bookmarkTab.add_separator()
-		m_bookmarkTab.add_command(label="Ntiyiso")
-		m_bookmarkTab.add_command(label="Sophy")
+		menuTAB([menuBar,'VekaRito','Surprise','Shadrack','Kulani','Cythia','Revlon'])
+		menuTAB([menuBar,'ChelaRito'])
+		menuTAB([menuBar,'Vona','Rito tsavuriwa'])
+		menuTAB([menuBar,'Langha'])
+		menuTAB([menuBar,'Pfuneka','HiDictionary','AppFoni','Swihoxo','MS Webpage','Hi...'])
 
-		menuBar.add_cascade(label="Bookmark",menu = m_bookmarkTab)
+		
+
 
 		mainAppWindow.config(menu=menuBar)
+
+		Label(mainAppWindow,text="Vulavi:").grid(row=0,column=0,sticky="W",padx=4,pady=6)
+		Entry(mainAppWindow).grid(row=0,column=1,sticky="W")
+		Text(mainAppWindow).grid(row=1,column=0,sticky="W",padx=4)
+		
 
 
 		mainAppWindow.mainloop()

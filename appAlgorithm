@@ -1,0 +1,153 @@
+
+
+Task: CREATE A DICTIONARY APP
+
+	Create words and descriptions
+	Store words and descriptions
+	Let the user search dictionary repository for desired words
+	Present the results to the user
+	Return descriptions of the searched desired word
+	Let the user save/bookmark words later reference
+	Let the user add other words and descriptions
+	Let the user copy search word
+	Let the user view search word
+ 	Present options to the user
+	Present help feature
+ 	Use GUI to let user interact with the app
+
+	12.1 Create the main gui class
+
+		12.1.1 Create the main/Super GUI components class
+
+		class GuiComponents{
+
+			
+			public static createComponents(rootComponent,componentType,compOptions,compGridOpts){
+
+
+					comp = componetType(rootComponent,compOptions);
+
+					addCompToView(comp,compGridOpts)
+
+
+
+
+			}
+
+
+			public static addCompToView(comp,compGridOpts){
+
+
+				comp.grid(compGridOpts)
+
+
+
+			}
+
+
+
+		}// End of main component Class
+
+
+
+		class GuiComponentType extends GuiComponents{
+
+
+				public function __construct(rootComponent,compObjType,compOptions,compGridOpts){
+
+
+					$this->createComponent(compObjType,compOptions,compGridOpts)
+
+
+				}
+
+
+
+
+
+
+		}// End of guicomponentType class
+
+
+
+
+		/////////////////////////////// Creating the App object            ///////////////////////////////
+
+
+
+			class App{
+
+
+				public function runAPP(){
+
+
+					rootComponent = tk.Tk()
+
+
+				    component1 = GuiComponentType(rootComponent,Button,{"background": "blue"},{"row":0,"column":0})
+				    component2 = GuiComponentType(rootComponent,Button,{"background": "red"},{"row":1,"column":0})
+
+
+
+
+					rootComponet.mainloop()
+
+
+
+
+
+				}
+
+
+
+
+
+
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+		///////////////////////////////// Creating the student Super class //////////////////////////////
+
+
+
+		class Students{
+
+
+			  public $name;
+			  public $surname;
+			  public $grade;
+			  public $sex
+
+
+			  public function __createStudent($name,$surname,$grade,$sex){
+
+
+			  	$this->name = $name;
+			  	$this->surname = $surname;
+			  	$this->grade = $grade;
+			  	$this->sex = $sex
+
+
+
+			  }
+
+
+
+
+		}
+
+
+		$student1 = Students($sname,$ssurname,$sgrade,$ssext);
+		$student1 = Students($sname,$ssurname,$sgrade,$ssext);
+		$student1 = Students($sname,$ssurname,$sgrade,$ssext);
+		$student1 = Students($sname,$ssurname,$sgrade,$ssext);

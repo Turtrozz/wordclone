@@ -1,0 +1,100 @@
+
+
+
+
+
+Mysql requires installation of time zone support,
+It supports time zones by using the extensive time zone support database
+mantained by The AILA-Internet Assigned Numbers Authority.
+The databaase is a standard set of international time zones,rules, name
+and locations.
+
+An index is a data structure that optimizes searches, sequential data access,insertions, and deletions
+Mysql uses indexes to improve performance and to support features that require order data
+An index keeps a logical order to a set of data
+If I want to find a particular row in a table, Access to a fast lookup of a unique index key is going to make
+that very easy to do
+
+Constraints create rules governing the behaviour of columns in your table
+In relational database, it is common to have one table refer to another table by its
+foreign keys
+
+
+
+
+A trigger is an operation that is automatically performed when a specific database event occurs
+A subselect is effectively a nested select statement.
+The result of a nested select statement is effectively a table that usually exists in memory,but
+it can always be used as you would use a table.Because of this, a select statement can be used as
+a data source for another select statement.
+
+/////////////////// Mongo DB Notes ///////////////////////////////////////////////////////
+
+
+
+Mongo DB is an open source noSQL database that uses some form of JSON to store data.
+
+
+
+
+MongoDB TOOLS:
+
+MongoDB Process(Very important) is the MongoDb client, it is actually a javascript console; as a result, we will be writing
+javascript to work with MongoDB databases.
+You can start the shell/terminal by running the Mongo command to connect to the server, and then you will get your prompt
+
+Other mongoDB tools are for administration and management; these are tools for importing and exporting data from a database. MongoDB
+content is stored in BSON-this storage structure is similar to JSON.
+
+You don't want to back up your data using JSON because it is a bad idea to store binary data,and as such you should use the mongodump command
+to backup you mongoDB database data.
+
+Mongodump command spits out a BSON data, that's actually binary data, and not text data.
+To restore the binary data as dumped with mongodump command, you will have to use the 'Mongorestore' command, but
+if you want to convert that BSON binary data to JSON, you can just use the 'bsondump' command
+
+The 'mongostat' command provides some statistics about your mongo database.
+BSON is JSON with two important additions/dinstinctions namely; 1. BSON is a binary representation of JSON, 2. It supports data types that
+are beyond the standard javascript ones, the most important for MongoDB being the ObjectID data type, which is the default type that MongoDB uses for
+unique items IDs in our database.
+
+The statement 'use db' sets the variable 'db' to be our given database name database.The key word(db) is actually an object that we gonna use to start working/interacting with our database.
+
+MongoDB does not create the database until we start storing data in it. 
+
+
+-------------------------------- noSQL Database terms/concepts ------------------------------------------
+
+Schema are table definitions such as columns, data types, constraints, etc.
+
+
+
+NOSQL DATABASE VS RELATIONAL DATABASES/SQL
+
+Collection (They usually don't follow schema, but you may enforce schema in your programming code,but it won't be enforced in your database, this means that
+the records in your database collections don't need to be related in any way-they can have entirely different sets of fields[although, this is not a smart idea,
+it is technically possible])
+ = 'Table' (a Table in relational databases(They follow schema)
+
+ DOCUMENT = 'ROW/RECORD' in relational databases
+
+ FIELD(It is composed of a key and a value just like in a JSON)   = 'COLUMN' in relational databases
+
+
+
+ ------------------------------ WORKING WITH MONGODB      -----------------------------------------------------
+
+ Starting mongo db shell 'mongo'
+ connecting to a database/creating one 'use'
+ displaying databases 'show'
+ creating a collection/table 'db.table.count()'
+
+
+
+ 
+ 
+
+
+
+
+

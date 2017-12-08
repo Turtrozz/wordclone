@@ -58,7 +58,7 @@ class GuiComponents:
 		if(optional != ''):
 
 
-			tabM = Menu(self.parentCompMenu,tearoff = 0)
+			tabM = optional(self.parentCompMenu,tearoff = 0)
 
 			return tabM
 
@@ -152,6 +152,7 @@ class GuiComponentType(GuiComponents):
 
 			print('I am working')
 			print('The random opts are as follows:',self.randOpts)
+			self.rootC.config(menu = self.parentCompMenu)
 			self.rootC.mainloop()
 
 
@@ -162,6 +163,7 @@ class GuiComponentType(GuiComponents):
 
 
 rootComp = Tk()
+rootComp.title("InteLexicon")
 
 frame = GuiComponentType(rootComp,Frame,{'peckOrder':'parent'})
 menu = GuiComponentType(rootComp,Menu,{'peckOrder':'parent'},randOptions = ['Bookmarks','Copy','View','Options','help'])
